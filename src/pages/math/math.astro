@@ -7,22 +7,24 @@ import Layout from '../../layouts/Layout.astro';
     <div class="list">
         <h2>الرياضيات</h2>
         <ul>
-          <li><span>الدوال العددية</span></li>
-          <li><span>Consectetur adipisicing elit</span></li>
-          <li><span>Ut labore et dolore magna aliqua</span></li>
-          <li><span>Ut enim ad minim veniam</span></li>
-          <li><span>Quis nostrud exercitation ullamco</span></li>
-          <li><span>Laboris nisi ut aliquip ex</span></li>
+          <li><a href="./leson/one"><span>الدوال العددية ( الاشتقاقية و الاستمرارية ) </span></a></li>
+          <li><a href="./leson/two"><span>الدالتان الاسية واللوغارتمية </span></a></li>
+          <li><span>الدوال العددية ( النهيات ) </span></li>
+          <li><span>التزايد المقارن ودراسة الدوال </span></li>
+          <li><a href="./leson/three"><span>المتتاليات العددية </span></a></li>
+          <li><span>الدوال الاصلية والحساب التكاملي </span></li>
+          <li><span>الاحصاء والاحتمالات </span></li>
+          <li><span>الاعداد المركبة والتحويلات النقطية </span></li>
         </ul>
       </div>
 </Layout>
 <style>
-    @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap");
+   @import url('https://fonts.googleapis.com/css2?family=Amiri&family=El+Messiri&family=Noto+Naskh+Arabic&family=Tajawal:wght@400&display=swap');
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
+  font-family: "Tajawal",sans-serif;
 
 }
 body {
@@ -87,6 +89,9 @@ body {
 }
 .list ul li:hover:before {
   transform: scaleX(1);
+}
+a{
+  color: white;
 }
 </style>
 

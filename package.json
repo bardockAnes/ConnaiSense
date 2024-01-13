@@ -10,6 +10,8 @@
     "astro": "astro"
   },
   "dependencies": {
-    "astro": "^4.0.9"
+    "astro": "^4.0.9",
+    "mathjax": "^3.2.2",
+    "tippy.js": "^6.3.7"
   }
 }
