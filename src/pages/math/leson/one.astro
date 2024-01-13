@@ -66,19 +66,7 @@ import Layout from '../../../layouts/Layout.astro';
         direction: rtl;
     }
 </style>
-<script>
-  window.addEventListener('load', function() {
-   var equation = document.getElementById('math-display');
-   equation.addEventListener('mouseenter', function() {
-     equation.textContent = "New equation: $f(x) = 2x + 3$";
-     MathJax.typesetPromise(); // Re-typeset the equation to render the changes
-   });
-   equation.addEventListener('mouseleave', function() {
-     equation.textContent = "Original equation: $f(x) = x^2 + 5x + 6$";
-     MathJax.typesetPromise(); // Re-typeset the equation to render the changes
-   });
-   });
- </script>
+
 
 
 
