@@ -11,6 +11,9 @@ import Layout from '../../../layouts/Layout.astro';
               <div id="math-display" class="math-equation">
                 Original equation: \( f(x) = x^2 + 5x + 6 \)
               </div>
+              <span id="e"></span>
+
+
             </div>
             <div id="text">الدالة المشتقة تساعدنا في فهم الدالة نفسها , اذ اردنا معرفة كيف هي الدالة في اي نقطة معين لا نرسم المنحنى بل نستعمل الاشتقاق لمعرفة ان كانت متزايدة او متناقصة او ثابة في تلك النقطة
                 y دالة نقول عنها f(x) الانها تتغير بتغير x الاشتقاقية هي دراسة دالك التغير كيف هي y في كل x معرفة في اي x تزداد y وفي اي x تتناقص و في اي x تكون تابة
@@ -65,7 +68,31 @@ import Layout from '../../../layouts/Layout.astro';
     #text {
         direction: rtl;
     }
+    #e{
+        color: gray;
+        font-size: large;
+        font-weight: 200;
+    }
 </style>
+<script>
+import katex from 'katex';
+import 'katex/dist/katex.min.css';
+
+import tippy from 'tippy.js';
+import 'tippy.js/dist/tippy.css';
+
+  
+const element = document.getElementById("e"); // Replace with the actual ID of your element
+katex.render("c = \\pm\\sqrt{a^2 + b^2} , F(x) = \int_{a}^{x} f(t) \, dt", element, {
+    throwOnError: false
+});
+
+tippy('#e', {
+  content: 'this is esey'
+});
+   
+
+</script>
 
 
 

@@ -11,6 +11,7 @@
   },
   "dependencies": {
     "astro": "^4.0.9",
+    "katex": "^0.16.9",
     "mathjax": "^3.2.2",
     "tippy.js": "^6.3.7"
   }
