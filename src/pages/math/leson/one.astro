@@ -11,7 +11,7 @@ import Layout from '../../../layouts/Layout.astro';
               <div id="math-display" class="math-equation">
                 Original equation: \( f(x) = x^2 + 5x + 6 \)
               </div>
-              <span id="e"></span>
+              <div id="e" ></div>
 
 
             </div>
@@ -69,9 +69,9 @@ import Layout from '../../../layouts/Layout.astro';
         direction: rtl;
     }
     #e{
-        color: gray;
         font-size: large;
         font-weight: 200;
+        margin: 20px;
     }
 </style>
 <script>
@@ -80,6 +80,7 @@ import 'katex/dist/katex.min.css';
 
 import tippy from 'tippy.js';
 import 'tippy.js/dist/tippy.css';
+import '../../../styles/style.css'
 
   
 const element = document.getElementById("e"); // Replace with the actual ID of your element
@@ -88,8 +89,11 @@ katex.render("c = \\pm\\sqrt{a^2 + b^2} , F(x) = \int_{a}^{x} f(t) \, dt", eleme
 });
 
 tippy('#e', {
-  content: 'this is esey'
+  content: 'هذا سهل',
+  trigger: 'click',
+  theme: 'light'
 });
+
    
 
 </script>
