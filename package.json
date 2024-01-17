@@ -11,8 +11,10 @@
   },
   "dependencies": {
     "astro": "^4.0.9",
+    "chart.js": "^4.4.1",
     "katex": "^0.16.9",
     "mathjax": "^3.2.2",
+    "mathjs": "^12.3.0",
     "tippy.js": "^6.3.7"
   }
 }
