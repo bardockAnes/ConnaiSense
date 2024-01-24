@@ -32,9 +32,14 @@ import Layout from '../../../layouts/Layout.astro';
                         <p>نقصد بها عندما تقترب النقطتان من بعضهما , بمأننا نبحث عن اتجاه الدالة في نقطة و هذا غير ممكن الاننا نحتاج نقطتان فنحن نأخد نقطتان
                           قريبتان من بعضهما جدا . اما في الشكل التاني <span class="aliashtiqaq2" ></span> ف<span class="h"></span>ترمز للفرق و نقصدبها عندما يكاد الفرق ينعدم و في المقام النقطة الاولى ناقص النقطة التانية التي تبتعد عنها بالفارق الضغير  <span class="h"></span>
                           , في بعض الحلات يكون استعمال الصيغة الاولى افضل و اسرع و العكس صحيح في حالات اخرى
-                          
                         </p>
-
+                        <h2 class="st">معادلة المماس​</h2>
+                        <p>الاشتقاقية هي معرفة اتجاه الدالة ,
+                         لماذا نحتاج الدالة المشتقة من اجل حساب المماس ؟ الاننا بعد معرفة كيف هي الدالة في تلك النقطة بستعمال الميل (الفرق) يمكننا فقط اطالة المستقيم (الميل الصغير جدا بين النقطتان عند حساب الاشتقاقية ) على كامل <span class="x"></span>      
+                         الان كل من الدالة المتشتقة و المماس في تلك النقطة يملكان نفس معامل التوجيه (نفس الاتجاه) 
+                        , نعرف مسبقا ان المماس هو دالة خطية تكتب على الشكل التالي <span class="yaxb"></span> حيث ان <span class="a"></span> هو معامل التوجيه , اذا نقوم بتعويض 
+                        <span class="yfxb"></span> بعد ايجاد <span class="a"></span> نبحث عن <span class="b"></span>
+                        </p>         
             </div>
             <div class="test">
             </div>
@@ -125,7 +130,7 @@ import Layout from '../../../layouts/Layout.astro';
     .mt{
         margin-top: 5px;
     }
-    .x, .y,.h,.fx,.x2 {
+    .x, .y,.h,.a,.b,.fx,.x2,.yaxb{
     margin: 0;
     padding: 0;
     font-size: 14px;
@@ -136,7 +141,7 @@ import Layout from '../../../layouts/Layout.astro';
       font-size: 22px;
     }
     
-    .aliashtiqaq,.aliashtiqaq2{
+    .aliashtiqaq,.aliashtiqaq2,.yfxb{
        direction: ltr;
        display: flex;
        justify-content:center;
@@ -149,6 +154,10 @@ import Layout from '../../../layouts/Layout.astro';
        justify-content: right;
        padding:5px;
        font-size: 16px;
+      }
+      .yaxb{
+       direction: ltr;
+       display: inline-flex;
       }
     .start{
         text-align: justify;
@@ -259,11 +268,23 @@ document.querySelectorAll(".x").forEach(element => {
 document.querySelectorAll(".h").forEach(element => {
     katex.render("h", element, { throwOnError: false });
 });
+document.querySelectorAll(".a").forEach(element => {
+    katex.render("a", element, { throwOnError: false });
+});
+document.querySelectorAll(".b").forEach(element => {
+    katex.render("b", element, { throwOnError: false });
+});
 document.querySelectorAll(".x2").forEach(element => {
     katex.render("x_{2}", element, { throwOnError: false });
 });
 document.querySelectorAll(".xx2").forEach(element => {
     katex.render("x-x_{2}", element, { throwOnError: false });
+});
+document.querySelectorAll(".yaxb").forEach(element => {
+    katex.render("y=ax+b", element, { throwOnError: false });
+});
+document.querySelectorAll(".yfxb").forEach(element => {
+    katex.render("y=f'(x_{0})*x+b", element, { throwOnError: false });
 });
 document.addEventListener('DOMContentLoaded', function() {
   document.querySelectorAll(".aliashtiqaq2").forEach(element => {
