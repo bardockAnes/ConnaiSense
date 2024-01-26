@@ -11,7 +11,7 @@ import Layout from '../../../layouts/Layout.astro';
                         المشتقة هي سرعة التغير اللحظي <br>
                         سرعة التغير : تغير<span  class="y"></span>بالنسبة ل<span  class="x"></span> <br>
                         اللحظي : في لحظة معينة اي في<span  class="x"></span>معين<br>
-                        اذن المشتقة هي سرعة التغير اللحظي لدالة ما في نقطة محددة. تساعدنا على معرفة إتجاه الدالة في تلك النقطة، سواء كانت ترتفع، تنخفض، أو تبقى ثابتة كيف ذالك ؟ من خلال معرفة قيمة<span class="fx"></span>إذا كانت قيمة  موجبة 2 ، فإن الدالة ترتفع. إذا كانت قيمتها سالبة 1- ، فإنها تنخفض. وإذا كانت مساوية للصفر ، فإنها تبقى ثابتة.</p>
+                        اذن المشتقة هي سرعة التغير اللحظي لدالة ما في نقطة محددة. تساعدنا على معرفة إتجاه الدالة في تلك النقطة، سواء كانت ترتفع، تنخفض، أو تبقى ثابتة كيف ذالك ؟ من خلال معرفة قيمة<span class="mfx"></span>إذا كانت قيمة  موجبة 2 ، فإن الدالة ترتفع. إذا كانت قيمتها سالبة 1- ، فإنها تنخفض. وإذا كانت مساوية للصفر ، فإنها تبقى ثابتة.</p>
                         <h2>الحساب</h2>
                         <div class="plotandtext">
                             <div class="hisab ">
@@ -38,52 +38,13 @@ import Layout from '../../../layouts/Layout.astro';
                          لماذا نحتاج الدالة المشتقة من اجل حساب المماس ؟ الاننا بعد معرفة كيف هي الدالة في تلك النقطة بستعمال الميل (الفرق) يمكننا فقط اطالة المستقيم (الميل الصغير جدا بين النقطتان عند حساب الاشتقاقية ) على كامل <span class="x"></span>      
                          الان كل من الدالة المتشتقة و المماس في تلك النقطة يملكان نفس معامل التوجيه (نفس الاتجاه) 
                         , نعرف مسبقا ان المماس هو دالة خطية تكتب على الشكل التالي <span class="yaxb"></span> حيث ان <span class="a"></span> هو معامل التوجيه , اذا نقوم بتعويض 
-                        <span class="yfxb"></span> بعد ايجاد <span class="a"></span> نبحث عن <span class="b"></span>
-                        </p>         
-            </div>
-            <div class="test">
-            </div>
-            <div id="text">الدالة المشتقة تساعدنا في فهم الدالة نفسها , اذ اردنا معرفة كيف هي الدالة في اي نقطة معين لا نرسم المنحنى بل نستعمل الاشتقاق لمعرفة ان كانت متزايدة او متناقصة او ثابة في تلك النقطة
-                y دالة نقول عنها f(x) الانها تتغير بتغير x الاشتقاقية هي دراسة دالك التغير كيف هي y في كل x معرفة في اي x تزداد y وفي اي x تتناقص و في اي x تكون تابة
-            
-                اسم المشتقة اعطيناه لدراسة الفرق بين نقطة ونقطة اخرى قريبة منها جدا , الفرق بينهما ....0,00000000 المهم انه يؤل لصفر لهذا نكتب x     0 ​
-                من هنا عرَّفنا المشتق على انها  السرعة اللحظية , معدل التغيير اللحظي , معدل التغير الاني ​
-               اذا النقطة التي نقوم بدراستها هي في الحقيقة نقطتان قريبتان جدا
-            
-               ابمعنا اخر لاشتقاقية هي دراسة الفرق بين نقطتين قريبتين جدا حيت ان الفرق بينهما يؤول الى الصفر اشارة الفرق اي اشارة المشتقة​
-               اذا كانت موجبة كلما زاد اكس زاد اغراك يعني ان المنحنى متصاعد والدالة متزايدة ​
-               اذا كانت سالبة كلما زاد اكس نقص اغراك يعني ان الدالة متناقصة​
-               وتابتة عند انعدام المشتقة 
-           
-               معامل التغير هو الهدف من الاشتقاق و هو الميل نفسه  ماهو اذا​
-               اكس تمر بمعادلة او ضيغة لتعطينا دالة اغراك​
-               اذا قسمنا  اغراك على اكس سنجد هذا المعامل​
-               y/x =المعامل​
-               خطا هذا معامل وليس معامل تغير​
-               معامل التغير يشمل نقطتين اي   عندما ننتقل من اكس الى اكس اخر تغير اغراك الى اغراك اخرى ​
-               y0-y1/x0-x1 = معامل التغير​
-               كيف هو ذالك التغير هل هو موجي ام سالب هل هو مضاعف وهذا يمكننا من معرفة كيف تتطور الدالة اى كيف تتغير الدالة متى تتزايد ومتى تتناقص ومتى تتبت و باي سرعة تتزايد الى اخره ​
-               لكن على اكس و اكس التانية  يكون قربين الان معامل التغير يختلف بسرعة لهذا سميناه معامل التغيرالاني او الحضي
-               
-               لهاذا نكتب عندما تؤل اكس الى اكس التانية اي قربتان جدا​
-               X0 -----) X1
-               و يمكن ان نكتب ايضا عندما تؤل اكس ناقص اكس التانية الى الصفر​
-               X0- x1 ------) 0
-               اي عندما يصبح الفرق بينهما قريب من الصفر اي النقطتان قريبتان جدا
-               اذن اكس تضرب في معامل ما  كيف مكان هذا المعامل سالب او موجب​
-            
-               معادلة المماس​
-               Y=x.معامل​
-               كما قلنا سابقا معامل التغير ليس اي معامل بل هو معرفة كيف تتغير غ الى غ اخرى عندما تتغير س الى س اخرى​
-               عندما ندرس الاشتقاقية نقول عندما تؤل س1 الى س2 لان الدالة تتغير بسرعة و كذالك معامل التغير او التوجيه يتغيرفي كل نقطة​           
-               تكون الدالة قابلة الاشتقاق عند نقطة اي لها معامل توجه اذا يمكننا صنع دالة المماس او معادلة المماس​
-               لها معامل توجيه واحد في كل نقطة من س وهو نفسه معامل توجيه الدالة في تلك النقطة​
-               وايضا  تكون مماس لدالة في نفس النقطة وذالك انطلاقا من المعادلة السابقة
-               Y1-y2=x1-x2.معامل التغير​             
-
-
-
-
+                        <span class="yfxb"></span> بعد ايجاد <span class="a"></span> نبحث عن <span class="b"></span> , <span class="y"></span> هي نفسها <span class="fx"></span> فقط تختلف طريقة الكتابة , تكتب <span class="fx"></span> الانها تتغير بتغير <span class="x"></span>
+                        <span class="bf"></span>  
+                        ثم نعوض <span class="b"></span> في معادلة المماس  
+                        <span class="yfxf"></span>
+                        <span class="mfx"></span> عامل مشترك
+                        <span class="ymamas"></span>
+                      </p>         
             </div>
         </div>
     </section>
@@ -109,6 +70,7 @@ import Layout from '../../../layouts/Layout.astro';
         font-weight: 400;
         margin-left: 2%;
         margin-right: 2%;
+        margin-bottom: 10vh;
 
     }
     
@@ -130,7 +92,7 @@ import Layout from '../../../layouts/Layout.astro';
     .mt{
         margin-top: 5px;
     }
-    .x, .y,.h,.a,.b,.fx,.x2,.yaxb{
+    .x, .y,.h,.a,.b,.fx,.mfx,.x2,.yaxb{
     margin: 0;
     padding: 0;
     font-size: 14px;
@@ -141,7 +103,7 @@ import Layout from '../../../layouts/Layout.astro';
       font-size: 22px;
     }
     
-    .aliashtiqaq,.aliashtiqaq2,.yfxb{
+    .aliashtiqaq,.aliashtiqaq2,.yfxb,.bf,.yfxf,.ymamas{
        direction: ltr;
        display: flex;
        justify-content:center;
@@ -260,6 +222,9 @@ document.querySelectorAll(".y").forEach(element => {
     katex.render("y", element, { throwOnError: false });
 });
 document.querySelectorAll(".fx").forEach(element => {
+    katex.render("f(x)", element, { throwOnError: false });
+});
+document.querySelectorAll(".mfx").forEach(element => {
     katex.render("f'(x)", element, { throwOnError: false });
 });
 document.querySelectorAll(".x").forEach(element => {
@@ -284,7 +249,16 @@ document.querySelectorAll(".yaxb").forEach(element => {
     katex.render("y=ax+b", element, { throwOnError: false });
 });
 document.querySelectorAll(".yfxb").forEach(element => {
-    katex.render("y=f'(x_{0})*x+b", element, { throwOnError: false });
+    katex.render("y=f'(x_{0})x+b", element, { throwOnError: false });
+});
+document.querySelectorAll(".bf").forEach(element => {
+    katex.render("b=f(x_{0})-x_{0}*f'(x_{0})", element, { throwOnError: false });
+});
+document.querySelectorAll(".yfxf").forEach(element => {
+    katex.render("y=f'(x_{0})x + f(x_{0})-x_{0}*f'(x_{0})", element, { throwOnError: false });
+});
+document.querySelectorAll(".ymamas").forEach(element => {
+    katex.render("y=f'(x_{0})(x-x_{0}) + f(x_{0})", element, { throwOnError: false });
 });
 document.addEventListener('DOMContentLoaded', function() {
   document.querySelectorAll(".aliashtiqaq2").forEach(element => {
