@@ -167,6 +167,7 @@ import Layout from '../../../layouts/Layout.astro';
   }
   .plotandtext{
     flex-direction: column;
+    align-items: center;
 }
 .hisab{
     width: 100%;
@@ -175,13 +176,20 @@ import Layout from '../../../layouts/Layout.astro';
 .plot{
     width: 80vw;
 }
-.aliashtiqaq,.aliashtiqaq2,.yfxb,.bf,.yfxf,.ymamas
+.aliashtiqaq,.aliashtiqaq2,.yfxb,{
        direction: ltr;
        display: flex;
        justify-content:center;
        padding: 20px;
        font-size: 16px;
       }
+.bf,.yfxf,.ymamas{
+       direction: ltr;
+       display: flex;
+       justify-content:center;
+       padding: 20px;
+       font-size: 14px;
+}
       .textDev{
     text-align: center;
     color: var(--color-4);
@@ -189,6 +197,12 @@ import Layout from '../../../layouts/Layout.astro';
     word-spacing: 5px;
     letter-spacing: 0.4px;
     }
+    .plotandtext{
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+  }
    
 }
    
