@@ -80,6 +80,16 @@ import Layout from "../../../layouts/Layout.astro";
         <canvas id="zahra" class="zahra"></canvas>
         <canvas id="mal" class="mal"></canvas>
       </div>
+      <p class="pt">دالة نمو الزهرة هي دالة مستمرة فهي لاتنقطع .<br>
+        اما دالة الرصيد فهي تنقطع في الشهر الثالث بسبب سحب المال اذا ليست دالة مستمرة ,
+        ملاحضة غير مستمرة لا يعني غير معرفة بل تملك حلان في تلك النقطة عن اليمين و عن اليسار كما في الرسم البياني
+      </p>
+      <h2>اتبات ان الدالة مستمرة في نقطة معينة</h2>
+      <p>عندما تكون الدالة مستمرة في نقطة معينة يعني ان النهاية في تلك النقطة هي نفسها الناتج عند التعويض في الدالة
+        <span class="limxx"></span>
+        عكس الدالة الغير المستمرة فالنهاية تختلف عن اليمين و عن اليسار (قيم كبرى و قيم صغرى) انضر الرسم البياني
+        <br>ملاحضة : الدالة مستمرة على مجوع تعريفها فقط الانها تنقطع عند القيم الغير معرفة
+      </p>
     </div>
   </section>
 </Layout>
@@ -115,6 +125,9 @@ import Layout from "../../../layouts/Layout.astro";
   .mt {
     margin-top: 5px;
   }
+  .pt{
+    padding-top:50px
+  }
   .x,
   .y,
   .h,
@@ -139,7 +152,8 @@ import Layout from "../../../layouts/Layout.astro";
   .yfxb,
   .bf,
   .yfxf,
-  .ymamas {
+  .ymamas,
+  .limxx {
     direction: ltr;
     display: flex;
     justify-content: center;
@@ -162,9 +176,6 @@ import Layout from "../../../layouts/Layout.astro";
   }
   .test {
     height: 100vh;
-  }
-  .textDev {
-    direction: rtl;
   }
   #text {
     direction: rtl;
@@ -331,6 +342,11 @@ import Layout from "../../../layouts/Layout.astro";
   });
   document.querySelectorAll(".ymamas").forEach((element) => {
     katex.render("y=f'(x_{0})(x-x_{0}) + f(x_{0})", element, {
+      throwOnError: false,
+    });
+  });
+  document.querySelectorAll(".limxx").forEach((element) => {
+    katex.render("\\lim\\limits_{x \\to a}f(x)=f(a) ", element, {
       throwOnError: false,
     });
   });
