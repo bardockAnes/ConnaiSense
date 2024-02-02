@@ -77,8 +77,8 @@ import Layout from "../../../layouts/Layout.astro";
       <h1>الاستمرارية</h1>
       <p> في الرياضيات، الاستمرارية تعني أن الأشياء تتغير بشكل سلس ومتواصل، دون أي انقطاعات. على سبيل المثال، عندما نتحدث عن دالة مستمرة، فإننا نقصد أنها لا تقفز فجأة من قيمة إلى أخرى، بل تتغير بشكل تدريجي ومستمر. هذا المفهوم مهم جدا في الرياضيات والعلوم، لأنه يساعدنا في فهم كيفية سلوك الأشياء في العالم الحقيقي</p>
       <div class="elestimrariya">
-        <canvas id="zahra"></canvas>
-        <canvas id="mal"></canvas>
+        <canvas id="zahra" class="zahra"></canvas>
+        <canvas id="mal" class="mal"></canvas>
       </div>
     </div>
   </section>
@@ -197,13 +197,17 @@ import Layout from "../../../layouts/Layout.astro";
     display: none;
   }
   .elestimrariya{
-    height: 300px;
     display: flex;
     gap: 20px;
-    margin: 20px;
     justify-content: center;
-    
+    margin-top: 50px;
   }
+  #zahra,#mal{
+   height: 320px !important; 
+   width: 46vw !important; 
+
+  }
+
   @media only screen and (max-width: 600px) {
     body {
       margin: 25px;
@@ -254,7 +258,6 @@ import Layout from "../../../layouts/Layout.astro";
     height: auto;
     display: flex;
     gap: 20px;
-    margin: 20px;
     justify-content: center;
     flex-direction: column;
     align-items: center;
@@ -263,8 +266,8 @@ import Layout from "../../../layouts/Layout.astro";
     
   }
   #zahra,#mal{
-    height:400px;
-    width:80vw;
+    height:260px !important; 
+    width:90vw !important;
   }
   }
 </style>
@@ -703,7 +706,7 @@ import Layout from "../../../layouts/Layout.astro";
   });
 
   var zahra = document.getElementById('zahra') as HTMLCanvasElement;
-  zahra.height = 400;
+ // zahra.height = 400;
 var zahrachart = new Chart(zahra, {
   type: 'line',
     data: {
@@ -722,20 +725,26 @@ var zahrachart = new Chart(zahra, {
                 beginAtZero: true,
                 title: {
                     display: true,
-                    text: 'الارتفاع'
-                }
+                    text: 'الارتفاع',
+                    color:"white"
+                
+                },
+                ticks:{color: "white"},
+                
             },
             x: {
                 title: {
                     display: true,
-                    text: 'الزمن'
-                }
+                    text: 'الزمن',
+                    color:"white"
+                },
+                ticks:{color: "white"},
             }
         }
     }
 });
 var mal = document.getElementById('mal') as HTMLCanvasElement;
-mal.height = 400;
+// mal.height = 400;
 var malchart = new Chart(mal, {
   type: 'line',
     data: {
@@ -763,14 +772,18 @@ var malchart = new Chart(mal, {
                 beginAtZero: false,
                 title: {
                     display: true,
-                    text: 'الرصيد'
-                }
+                    text: 'الرصيد',
+                    color:"white"
+                },
+                ticks:{color: "white"},
             },
             x: {
                 title: {
                     display: true,
-                    text: 'الاشهر'
-                }
+                    text: 'الاشهر',
+                    color:"white"
+                },
+                ticks:{color: "white"},
             }
         },         plugins: {
             legend: {
