@@ -73,6 +73,120 @@ import Layout from "../../../layouts/Layout.astro";
         <span class="mfx"></span> عامل مشترك
         <span class="ymamas"></span>
       </p>
+      <h2>اختصارات الاشتقاقية</h2>
+      <div class="alltables">
+      <div class="tables">
+        <h3 class="tableH">دوال مألوفة</h3>
+      <table>
+        <tr>
+          <th class="fx th1"></th>
+          <th class="mfx th1"></th>
+        </tr>
+        <tr>
+          <td class="td1">k (عدد حقيقي تابت)</td>
+          <td>0</td>
+        </tr>
+        <tr>
+          <td class="x"></td>
+          <td>1</td>
+        </tr>
+        <tr>
+          <td class="x²"></td>
+          <td>2x</td>
+        </tr>
+        <tr>
+          <td class="xN"></td>
+          <td class="mxN"></td>
+        </tr>
+        <tr>
+          <td>ax+b</td>
+          <td>a</td>
+        </tr>
+        <tr>
+          <td class="Sx"></td>
+          <td class="mSx"></td>
+        </tr>
+        <tr>
+          <td class="onex"></td>
+          <td class="monex"></td>
+        </tr>
+        <tr>
+          <td>cos(x)</td>
+          <td>-sin(x)</td>
+        </tr>
+        <tr>
+          <td>sin(x)</td>
+          <td>cos(x)</td>
+        </tr>
+        <tr>
+          <td>tan(x)</td>
+          <td class="mtan">1/cos2(x)=1+tan2(x)</td>
+        </tr>
+      </table>
+    </div>
+    <div class="tables">
+      <h3 class="tableH">العمليات و الاشتقاق</h3>
+    <table>
+      <tr>
+        <th>الدالة</th>
+        <th>الاشتقاق</th>
+      </tr>
+      <tr>
+        <td>U+V</td>
+        <td>U'+V'</td>
+      </tr>
+      <tr>
+        <td class="UV">U*V</td>
+        <td class="mUV">U'*V+V'*U</td>
+      </tr>
+      <tr>
+        <td>KU</td>
+        <td>KU'</td>
+      </tr>
+      <tr>
+        <td class="UfV">U/V</td>
+        <td class="mUfV">U'*V-V'*U/V2</td>
+      </tr>
+      <tr>
+        <td class="kfV">k/V</td>
+        <td class="mkfV">-kV'/V2</td>
+      </tr>
+      <tr>
+        <td>UoV</td>
+        <td>U'.V'oU</td>
+      </tr>  
+    </table>
+  </div>
+  <div class="tables">
+    <h3 class="tableH">دوال مركبة</h3>
+  <table>
+    <tr>
+      <th>الدالة</th>
+      <th>الاشتقاق</th>
+    </tr>
+    <tr>
+      <td>U(ax+b)</td>
+      <td>aU'(ax+b)</td>
+    </tr>
+    <tr>
+      <td class="USn">Un</td>
+      <td class="mUSn">nU'*Un-1</td>
+    </tr>
+    <tr>
+      <td class="SRU">/U</td>
+      <td class="mSRU">U'/2/U</td>
+    </tr>
+    <tr>
+      <td class="onefx">1/xn</td>
+      <td class="monefx">-n/xn+1</td>
+    </tr>
+    <tr>
+      <td class="onefUn">1/Un</td>
+      <td class="monefUn">-nU'/Un+1</td>
+    </tr>
+  </table>
+</div>
+      </div>
 
       <h1>الاستمرارية</h1>
       <p> في الرياضيات، الاستمرارية تعني أن الأشياء تتغير بشكل سلس ومتواصل، دون أي انقطاعات. على سبيل المثال، عندما نتحدث عن دالة مستمرة، فإننا نقصد أنها لا تقفز فجأة من قيمة إلى أخرى، بل تتغير بشكل تدريجي ومستمر. هذا المفهوم مهم جدا في الرياضيات والعلوم، لأنه يساعدنا في فهم كيفية سلوك الأشياء في العالم الحقيقي</p>
@@ -95,6 +209,36 @@ import Layout from "../../../layouts/Layout.astro";
 </Layout>
 
 <style>
+
+  table{
+    border: 1px solid white;
+    border-collapse:collapse;
+    text-align:center;
+    min-width:200px;
+  }
+  th, td {
+    border: 1px solid black; /* This sets the border of table header and data cells */
+    padding: 8px; /* This sets the padding inside table cells */
+    direction: ltr;
+    }
+    .td1{
+      direction: rtl;
+    }
+    .th1{
+      height: 35px;
+    }
+  .tableH{
+    text-align:center;
+  }
+  .tables{
+    width:fit-content;
+  }
+  .alltables{
+    display:flex;
+    justify-content: space-around;
+  }
+
+ 
 
   .st {
     margin-bottom: 5px;
@@ -256,6 +400,10 @@ import Layout from "../../../layouts/Layout.astro";
     height:100% !important; 
     width:100% !important;
   }
+  .alltables{
+    flex-direction: column;
+    align-items: center;
+  }
   }
 </style>
 
@@ -326,6 +474,80 @@ import Layout from "../../../layouts/Layout.astro";
       throwOnError: false,
     });
   });
+  document.querySelectorAll(".x²").forEach((element) => {
+    katex.render("x²", element, { throwOnError: false });
+  });
+  document.querySelectorAll(".xN").forEach((element) => {
+    katex.render("x^n", element, { throwOnError: false });
+  });
+  document.querySelectorAll(".mxN").forEach((element) => {
+    katex.render("nx^{n-1}", element, { throwOnError: false });
+  });
+  document.querySelectorAll(".Sx").forEach((element) => {
+    katex.render("\\sqrt{x}", element, { throwOnError: false });
+  });
+  document.querySelectorAll(".mSx").forEach((element) => {
+    katex.render("\\frac{1}{2\\sqrt{x}}", element, { throwOnError: false });
+  });
+  document.querySelectorAll(".onex").forEach((element) => {
+    katex.render("\\frac{1}{x}", element, { throwOnError: false });
+  });
+  document.querySelectorAll(".monex").forEach((element) => {
+    katex.render("-\\frac{1}{x²}", element, { throwOnError: false });
+  });
+  document.querySelectorAll(".mtan").forEach((element) => {
+    katex.render("\\frac{1}{cos²(x)}=1+tan²(x)", element, { throwOnError: false });
+  });
+  document.querySelectorAll(".UV").forEach((element) => {
+    katex.render("UV", element, { throwOnError: false });
+  });document.querySelectorAll(".mUV").forEach((element) => {
+    katex.render("U'V+V'U", element, { throwOnError: false });
+  });
+  document.querySelectorAll(".UfV").forEach((element) => {
+    katex.render("\\frac{U}{V}", element, { throwOnError: false });
+  });
+  document.querySelectorAll(".mUfV").forEach((element) => {
+    katex.render("\\frac{U'V-V'U}{V²}", element, { throwOnError: false });
+  });
+  document.querySelectorAll(".kfV").forEach((element) => {
+    katex.render("\\frac{k}{V}", element, { throwOnError: false });
+  });
+  document.querySelectorAll(".mkfV").forEach((element) => {
+    katex.render("\\frac{-kV'}{V²}", element, { throwOnError: false });
+  });
+  document.querySelectorAll(".USn").forEach((element) => {
+    katex.render("U^n", element, { throwOnError: false });
+  });
+  document.querySelectorAll(".mUSn").forEach((element) => {
+    katex.render("nU'.U^{n-1}", element, { throwOnError: false });
+  });
+  document.querySelectorAll(".SRU").forEach((element) => {
+    katex.render("\\sqrt{U}", element, { throwOnError: false });
+  });
+  document.querySelectorAll(".mSRU").forEach((element) => {
+    katex.render("\\frac{U'}{2\\sqrt{U}}", element, { throwOnError: false });
+  });
+  document.querySelectorAll(".onefx").forEach((element) => {
+    katex.render("\\frac{1}{x^{n}}", element, { throwOnError: false });
+  });
+  document.querySelectorAll(".monefx").forEach((element) => {
+    katex.render("-\\frac{n}{x^{n+1}}", element, { throwOnError: false });
+  });
+  document.querySelectorAll(".onefUn").forEach((element) => {
+    katex.render("\\frac{1}{U^{n}}", element, { throwOnError: false });
+  });
+  document.querySelectorAll(".monefUn").forEach((element) => {
+    katex.render("-\\frac{nU'}{U^{n+1}}", element, { throwOnError: false });
+  });
+  
+
+
+
+
+
+
+
+
   document.addEventListener("DOMContentLoaded", function () {
     document.querySelectorAll(".aliashtiqaq2").forEach((element) => {
       katex.render(
